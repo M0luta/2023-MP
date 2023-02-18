@@ -1,0 +1,49 @@
+my_data ={"Годяев Владимир Владиславович",10,8,2003} #картеж
+attestate={#словарь
+           "Алгебра":4,
+		   "Иностранный язык": 5,
+		   
+}
+family_names =['Серёжа','Дима','Серёжа']
+kiva_name = 'Коля'
+#и закоммитить, чтоб не пропало
+#No1
+#for  in range(len(attestate)):
+#к элементу словаря по номеру не обращаются, только по ключу
+sum_mark = 0
+for key in attestate:
+        sum+=attestate[key]
+av_mark = sum_mark/len(attestate)
+print(av_mark)
+#for key in attestate.values(): проще
+#     sum+=val      
+#av_mark = sum((attestate.values())/len(attestate)) одной строчкой
+
+#во всех 3х случаях один и тот же результат
+
+unique_names = []
+for name in family_names:
+     if name in unique_names:
+        continue
+     #else: ненадо перепроверять, и так продолжиться
+     unique_names.append(name)
+print(unique_names)
+#print(set(family_names)) тот же результат, *set(family_names) вместо списка выведет последовательность значений
+
+#print(bin(ord(kiva_name[0]))) 
+print(*bytearray(kiva_name, 'utf-8'))
+
+#date = input("Enter today's date: ")#либо
+import datetime as dt
+date = dt.datetime.today()
+date_birth = dt.datetime(day=my_data[1], # или day=10,
+                         month = my_data[2], #или month=8,
+                         year = my_data[3]) #или year=2003)
+print((date-date_birth).days)
+
+#очередь
+import queue
+stuff = queue.Queue()
+i = int(imput())
+while i != -1:
+        stuff.add      
